@@ -2,8 +2,20 @@
 simple python code to write xlsx files without pandas or openpyxl
 just in case you can't install pandas or openpyxl wherever you need to write to excel workbook, you can use this.
 
+```python
+from xlWriter import createWorkBook, SAMPLE_DATA
+
+# Print sample data to see how the input should be.
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(SAMPLE_DATA)
+
+createWorkBook(SAMPLE_DATA, 'TEST.xlsx')
 ```
-SAMPLE_DATA = {
+
+Sample input: 
+```python
+{
     'sales':{
         'table': [
             ["Product", "Units Sold", "Revenue ($)"],
@@ -26,7 +38,4 @@ SAMPLE_DATA = {
         ]
     }
 }
-
-from xlWriter import createWorkBook
-createWorkBook(SAMPLE_DATA, 'TEST.xlsx')
 ```
