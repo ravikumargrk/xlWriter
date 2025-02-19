@@ -31,3 +31,24 @@ Sample input:
 }
 ```
 ![image](https://github.com/user-attachments/assets/1bd26afe-0c55-4490-9ef8-83cf68f541fc)
+
+```shell
+XLSX structure:
+workbook.xlsx
+├── [Content_Types].xml         Fixed
+├── _rels     
+|   └── .rels                   Fixed
+├── docProps
+│   ├── app.xml                 Fixed
+│   └── core.xml                Fixed (+Needs create date)
+└── xl
+    ├── styles.xml              Fixed
+    ├── theme
+    │   └── theme1.xml          Fixed
+    ├── workbook.xml            +1 line for every sheet added
+    ├── _rels                   
+    │   └── workbook.xml.rels   +1 line for every sheet added
+    └── worksheets
+        ├── sheet1.xml          changes as per new sheet structure
+        └── sheet2.xml          changes as per new sheet structure
+```
