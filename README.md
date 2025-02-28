@@ -32,7 +32,7 @@ Sample input:
 ```
 ![image](https://github.com/user-attachments/assets/1bd26afe-0c55-4490-9ef8-83cf68f541fc)
 
-```shell
+```
 XLSX structure:
 workbook.xlsx
 ├── [Content_Types].xml         Fixed
